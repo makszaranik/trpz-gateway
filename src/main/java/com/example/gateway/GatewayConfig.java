@@ -13,9 +13,9 @@ public class GatewayConfig {
         return builder.routes()
                 .route("backendRoutes", r -> r.path("/api/**")
                         .filters(f -> f.stripPrefix(1))
-                        .uri("http://localhost:8080"))
+                        .uri("http://core:8080"))
                 .route("frontend", r -> r.path("/**")
-                        .uri("http://localhost:3000"))
+                        .uri("http://frontend:80"))
                 .build();
     }
 }

@@ -1,5 +1,11 @@
 spring:
   main:
     web-application-type: reactive
+
 server:
-  port: 8081
+  port: 8000
+
+logging:
+  level:
+    org.springframework.security: TRACE
+    org.springframework.web.reactive.function.client: TRACE
